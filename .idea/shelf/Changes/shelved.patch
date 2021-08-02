@@ -1,0 +1,105 @@
+Index: .github/workflows/maven.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>---\r\nname: \"pre-release\"\r\n\r\non:\r\n  push:\r\n    branches:\r\n      - \"master\"\r\n\r\njobs:\r\n  pre-release:\r\n    name: \"Pre Release\"\r\n    runs-on: \"ubuntu-latest\"\r\n\r\n    steps:\r\n      # ...\r\n      - name: \"Build & test\"\r\n        run: |\r\n          echo \"done!\"\r\n\r\n      - uses: \"marvinpinto/action-automatic-releases@latest\"\r\n        with:\r\n          repo_token: \"${{ secrets.GITHUB_TOKEN }}\"\r\n          automatic_release_tag: \"latest\"\r\n          prerelease: true\r\n          title: \"Development Build\"\r\n          files: |\r\n            LICENSE.txt\r\n            *.jar\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.github/workflows/maven.yml b/.github/workflows/maven.yml
+--- a/.github/workflows/maven.yml	(revision 958bf5bcb1b35532f3ad42c9b7bc7e850cb6faed)
++++ b/.github/workflows/maven.yml	(date 1627868259269)
+@@ -24,5 +24,5 @@
+           prerelease: true
+           title: "Development Build"
+           files: |
+-            LICENSE.txt
++            README.md
+             *.jar
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+--- /dev/null	(date 1627868367017)
++++ b/.gitignore	(date 1627868367017)
+@@ -0,0 +1,3 @@
++/.project
++/.settings/
++/out
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ArtifactsWorkspaceSettings\">\r\n    <artifacts-to-build>\r\n      <artifact name=\"account-service:jar\" />\r\n    </artifacts-to-build>\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e4320638-f4be-4cdf-b708-63912cf6f301\" name=\"Changes\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/artifacts/account_service_jar.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/artifacts/auth_service_jar.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/artifacts/eureka_service_jar.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/artifacts/gateway_service_jar.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/account-service/src/main/java/META-INF/MANIFEST.MF\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/out/artifacts/account_service_jar/account-service.jar\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/.gitignore\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/compiler.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/compiler.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/encodings.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/encodings.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/jarRepositories.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/jarRepositories.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/misc.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/account-service/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/account-service/pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/auth-service/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/auth-service/pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/eureka-service/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/eureka-service/pom.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/gateway-service/pom.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/gateway-service/pom.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"JpbToolWindowState\">\r\n    <option name=\"myId2FirstActivated\">\r\n      <map>\r\n        <entry key=\"JPA Structure\" value=\"true\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"myId2Visible\">\r\n      <map>\r\n        <entry key=\"JPA Structure\" value=\"false\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1w9OJzlW7Zq0ArvMcaPBjzGFAL8\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n    <option name=\"showMembers\" value=\"true\" />\r\n    <option name=\"showVisibilityIcons\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/out\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Artifacts\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.38569206\" />\r\n  </component>\r\n  <component name=\"RunDashboard\">\r\n    <option name=\"configurationTypes\">\r\n      <set>\r\n        <option value=\"SpringBootApplicationConfigurationType\" />\r\n      </set>\r\n    </option>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"Spring Boot.EurekaServerRunner\">\r\n    <configuration name=\"AccountServiceApplicationRunner\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\">\r\n      <module name=\"account-service\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"io.aced.account.AccountServiceApplicationRunner\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"AuthorizationRunner\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\">\r\n      <module name=\"auth-service\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"io.aced.auth.AuthorizationRunner\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"EurekaServerRunner\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\">\r\n      <module name=\"eureka-service\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"io.aced.eureka.EurekaServerRunner\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"ZuulApiGatewayRunner\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\">\r\n      <module name=\"gateway-service\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"io.aced.gateway.ZuulApiGatewayRunner\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e4320638-f4be-4cdf-b708-63912cf6f301\" name=\"Changes\" comment=\"\" />\r\n      <created>1627867274680</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1627867274680</updated>\r\n      <workItem from=\"1627867276750\" duration=\"710000\" />\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 958bf5bcb1b35532f3ad42c9b7bc7e850cb6faed)
++++ b/.idea/workspace.xml	(date 1627868455923)
+@@ -9,23 +9,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="e4320638-f4be-4cdf-b708-63912cf6f301" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/account_service_jar.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/auth_service_jar.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/eureka_service_jar.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/gateway_service_jar.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/account-service/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/out/artifacts/account_service_jar/account-service.jar" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/account-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/account-service/pom.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/eureka-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-service/pom.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
++    <list default="true" id="e4320638-f4be-4cdf-b708-63912cf6f301" name="Changes" comment="gitignore, auto dep">
++      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.github/workflows/maven.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven.yml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -113,8 +100,23 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1627867274680</updated>
+-      <workItem from="1627867276750" duration="710000" />
++      <workItem from="1627867276750" duration="1167000" />
++    </task>
++    <task id="LOCAL-00001" summary="artifacts">
++      <created>1627868012184</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1627868012184</updated>
+     </task>
++    <task id="LOCAL-00002" summary="artifacts">
++      <created>1627868129667</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1627868129667</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -133,5 +135,9 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
++    <MESSAGE value="artifacts" />
++    <MESSAGE value="gitignore" />
++    <MESSAGE value="gitignore, auto dep" />
++    <option name="LAST_COMMIT_MESSAGE" value="gitignore, auto dep" />
+   </component>
+ </project>
+\ No newline at end of file
