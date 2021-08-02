@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>io.aced</groupId>
-	<artifactId>micro-auth-service</artifactId>
+	<artifactId>auth-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	
 	<name>authorization-server</name>

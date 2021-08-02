@@ -10,7 +10,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>microser-sales-service</name>
+	<name>account-service</name>
 	<description>imtem service demo project</description>
 
 	<parent>
