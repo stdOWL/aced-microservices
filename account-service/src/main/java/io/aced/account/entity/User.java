@@ -1,4 +1,4 @@
-package io.aced.auth.model;
+package io.aced.account.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
