@@ -1,18 +1,19 @@
-# Hystrix Dashboard, Swagger2 with [secure-spring-boot-microservice](https://github.com/ahsumon85/secure-spring-boot-microservice)
+# AceD Token - microservices
+
 
 ## Overview
 
+![MicroService Structure](https://github.com/stdOWL/aced-microservices/blob/d94df9d7a0ee7dfb4c8949f9bfd48d8d39524c72/AceD-service-structure.png?raw=true)
+
+
 ### The architecture is composed by five services: 
 
-   * [`micro-api-getway`](https://github.com/ahsumon85/advance-spring-boot-microservice#api-gateway-service): API Gateway created by **Zuul** that is internally uses Ribbon **Load Balancer**  and  also can monitor Hystrix stream from every API request by **Hystrix**
+   * [`api-getway`](https://github.com/ahsumon85/advance-spring-boot-microservice#api-gateway-service): API Gateway created by **Zuul** that is internally uses Ribbon **Load Balancer**  and  also can monitor Hystrix stream from every API request by **Hystrix**
 
-   * [`micro-eureka-server`](https://github.com/ahsumon85/advance-spring-boot-microservice#eureka-service): Service **Registry Server** created by Eureka with  **Load Balancer** for inter-service communication 
+   * [`eureka-server`](https://github.com/ahsumon85/advance-spring-boot-microservice#eureka-service): Service **Registry Server** created by Eureka with  **Load Balancer** for inter-service communication 
 
-   * [`micro-auth-service`](https://github.com/ahsumon85/advance-spring-boot-microservice#authorization-service): Simple REST service created with `Spring Boot, Spring Cloud Oauth2, Spring Data JPA, MySQL` to use as an **authorization service**
+   * [`auth-service`](https://github.com/ahsumon85/advance-spring-boot-microservice#authorization-service): Simple REST service created with `Spring Boot, Spring Cloud Oauth2, Spring Data JPA, MySQL` to use as an **authorization service**
 
-   * [`micro-item-service`](https://github.com/ahsumon85/advance-spring-boot-microservice#item-service---resource-service): Simple REST service created with `Spring Boot, Spring Data JPA, MySQL and swagger to test api` to use as a **resource service**
-
-   * [`micro-sales-service`](https://github.com/ahsumon85/advance-spring-boot-microservice#sales-service--resource-service): Simple REST service created with `Spring Boot, Spring Data JPA, MySQL and swagger to test api` to use as a **resource service**
 
 `Follow the link to see docker deployment with docker,docker-compose` [`dockerized-spring-boot-microservice`](https://github.com/ahsumon85/dockerized-spring-boot-microservice) 
 
@@ -432,8 +433,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
 ![Screenshot from 2020-12-07 15-22-21](https://user-images.githubusercontent.com/31319842/101333238-93c4c080-38a0-11eb-8f06-02c29558a31b.png)
 
-### Oauth2 login UI
-<img src="https://user-images.githubusercontent.com/31319842/101333236-932c2a00-38a0-11eb-8bdb-bde71fa98a7f.png" alt="Screenshot from 2020-12-07 15-22-53" style="height:%" />
 
 
 
